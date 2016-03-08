@@ -1,0 +1,228 @@
+Refresh time is: 1
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	703469
+Total writes to disk:	101920
+Total run time is: 1222 ms
+Total number of refreshes: 1000000
+******************************************************
+Refresh time is: 2
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	380264
+Total writes to disk:	60378
+Total run time is: 1040 ms
+Total number of refreshes: 500000
+******************************************************
+Refresh time is: 3
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	307108
+Total writes to disk:	43536
+Total run time is: 991 ms
+Total number of refreshes: 333333
+******************************************************
+Refresh time is: 4
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	262094
+Total writes to disk:	33252
+Total run time is: 982 ms
+Total number of refreshes: 250000
+******************************************************
+Refresh time is: 5
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	214989
+Total writes to disk:	21937
+Total run time is: 1051 ms
+Total number of refreshes: 200000
+******************************************************
+Refresh time is: 11
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	183183
+Total writes to disk:	17407
+Total run time is: 1060 ms
+Total number of refreshes: 90909
+******************************************************
+Refresh time is: 12
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	181485
+Total writes to disk:	17474
+Total run time is: 1009 ms
+Total number of refreshes: 83333
+******************************************************
+Refresh time is: 13
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	179584
+Total writes to disk:	17631
+Total run time is: 939 ms
+Total number of refreshes: 76923
+******************************************************
+Refresh time is: 14
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	178152
+Total writes to disk:	17698
+Total run time is: 1005 ms
+Total number of refreshes: 71428
+******************************************************
+Refresh time is: 15
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	177016
+Total writes to disk:	17869
+Total run time is: 964 ms
+Total number of refreshes: 66666
+******************************************************
+Refresh time is: 16
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	176355
+Total writes to disk:	18083
+Total run time is: 971 ms
+Total number of refreshes: 62500
+******************************************************
+Refresh time is: 17
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	175583
+Total writes to disk:	18116
+Total run time is: 989 ms
+Total number of refreshes: 58823
+******************************************************
+Refresh time is: 18
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	175025
+Total writes to disk:	18228
+Total run time is: 960 ms
+Total number of refreshes: 55555
+******************************************************
+Refresh time is: 19
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	174456
+Total writes to disk:	18342
+Total run time is: 1003 ms
+Total number of refreshes: 52631
+******************************************************
+Refresh time is: 20
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	174524
+Total writes to disk:	18428
+Total run time is: 884 ms
+Total number of refreshes: 50000
+******************************************************
+Refresh time is: 21
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	174329
+Total writes to disk:	18560
+Total run time is: 956 ms
+Total number of refreshes: 47619
+******************************************************
+Refresh time is: 30
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	179499
+Total writes to disk:	19242
+Total run time is: 972 ms
+Total number of refreshes: 33333
+******************************************************
+Refresh time is: 50
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	197711
+Total writes to disk:	18928
+Total run time is: 980 ms
+Total number of refreshes: 20000
+******************************************************
+Refresh time is: 100
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	235415
+Total writes to disk:	17651
+Total run time is: 1045 ms
+Total number of refreshes: 10000
+******************************************************

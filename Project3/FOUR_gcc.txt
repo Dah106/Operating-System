@@ -1,0 +1,188 @@
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: opt
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	118480
+Total writes to disk:	15031
+Total run time is: 3385 ms
+Total number of refreshes: 0
+******************************************************
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: clock
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	181856
+Total writes to disk:	29401
+Total run time is: 944 ms
+Total number of refreshes: 0
+******************************************************
+Refresh time is: 21
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	174329
+Total writes to disk:	18560
+Total run time is: 996 ms
+Total number of refreshes: 47619
+******************************************************
+Refresh time is: 13
+TAU is: 5
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: work
+File processed: gcc.trace
+Number of frames:	8
+Total memory accesses:	1000000
+Total page faults:	176225
+Total writes to disk:	34435
+Total run time is: 911 ms
+Total number of refreshes: 76923
+******************************************************
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: opt
+File processed: gcc.trace
+Number of frames:	16
+Total memory accesses:	1000000
+Total page faults:	80307
+Total writes to disk:	11316
+Total run time is: 2005 ms
+Total number of refreshes: 0
+******************************************************
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: clock
+File processed: gcc.trace
+Number of frames:	16
+Total memory accesses:	1000000
+Total page faults:	121682
+Total writes to disk:	16376
+Total run time is: 877 ms
+Total number of refreshes: 0
+******************************************************
+Refresh time is: 21
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	16
+Total memory accesses:	1000000
+Total page faults:	151435
+Total writes to disk:	12972
+Total run time is: 923 ms
+Total number of refreshes: 47619
+******************************************************
+Refresh time is: 13
+TAU is: 5
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: work
+File processed: gcc.trace
+Number of frames:	16
+Total memory accesses:	1000000
+Total page faults:	132102
+Total writes to disk:	21126
+Total run time is: 957 ms
+Total number of refreshes: 76923
+******************************************************
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: opt
+File processed: gcc.trace
+Number of frames:	32
+Total memory accesses:	1000000
+Total page faults:	55802
+Total writes to disk:	8274
+Total run time is: 3167 ms
+Total number of refreshes: 0
+******************************************************
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: clock
+File processed: gcc.trace
+Number of frames:	32
+Total memory accesses:	1000000
+Total page faults:	87686
+Total writes to disk:	12293
+Total run time is: 862 ms
+Total number of refreshes: 0
+******************************************************
+Refresh time is: 21
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	32
+Total memory accesses:	1000000
+Total page faults:	146721
+Total writes to disk:	11876
+Total run time is: 938 ms
+Total number of refreshes: 47619
+******************************************************
+Refresh time is: 13
+TAU is: 5
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: work
+File processed: gcc.trace
+Number of frames:	32
+Total memory accesses:	1000000
+Total page faults:	101227
+Total writes to disk:	14708
+Total run time is: 1048 ms
+Total number of refreshes: 76923
+******************************************************
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: opt
+File processed: gcc.trace
+Number of frames:	64
+Total memory accesses:	1000000
+Total page faults:	38050
+Total writes to disk:	5730
+Total run time is: 3411 ms
+Total number of refreshes: 0
+******************************************************
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: clock
+File processed: gcc.trace
+Number of frames:	64
+Total memory accesses:	1000000
+Total page faults:	61640
+Total writes to disk:	9346
+Total run time is: 938 ms
+Total number of refreshes: 0
+******************************************************
+Refresh time is: 21
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: nru
+File processed: gcc.trace
+Number of frames:	64
+Total memory accesses:	1000000
+Total page faults:	136656
+Total writes to disk:	10436
+Total run time is: 1014 ms
+Total number of refreshes: 47619
+******************************************************
+Refresh time is: 13
+TAU is: 5
+******************************************************
+Final stats are displayed here: 
+Page Replacement algorithm is: work
+File processed: gcc.trace
+Number of frames:	64
+Total memory accesses:	1000000
+Total page faults:	75313
+Total writes to disk:	10242
+Total run time is: 1029 ms
+Total number of refreshes: 76923
+******************************************************

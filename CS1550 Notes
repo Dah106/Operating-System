@@ -1,0 +1,453 @@
+******************************************************************
+August 31st, 2015
+
+Manage Resources
+
+- CPU Time
+	* Which process has to wait, which process has to run first ...
+- Memory
+- I/O Devices
+- Security
+
+Abstract Details
+
+- Exclusive access to the CPU
+- Huge amounts of dedicated RAM
+- Exclusive access to I/O devices
+- Transparent security
+
+******************************************************************
+September 2nd, 2015
+
+Address space: Enumeration of every possible address
+
+System Call: Provides an interface to the OS services
+
+User Mode: Only a subset of instructions and features are accessible
+
+Kernel Mode: All instructions and features are accessible
+
+Exception: Something goes bad in proviliged mode
+
+Context Switch: Switching from on one running process to another
+
+	- System call or the result of an event gives control of CPU to OS
+
+	- Using buffer in scanf reduces the number of context switching
+
+Bigger Memory: longer access time, off-chip
+******************************************************************
+September 9th, 2015
+
+Monolithic OS: All services as well as core functionality are a tight knit group sharing the same space.
+
+Microkernel: Core functionality is isolated from system services and device drivers.
+
+Pros and Cons
+
+	- Microkernel is slower than monolithic OS.
+	- Monolithic OS fails more often than microkernel. 
+
+Virtual Machines
+	- Have the ability to run different OS on your host OS
+	- Provide level of isolation, etc crashes without compromising the host OS
+
+Scheduling
+	-
+******************************************************************
+September 10th, 2015 (Recitation)
+
+ded59@pitt.edu
+Debarun Das
+Office Hour: 6501 Sennot TuTh 3-6 PM Fri 3:50 - 6:50 PM
+
+1) Different Components of A Computer System: Hardware, Operating System, Application programs, User.
+
+2) What is an OS? 
+Interface between H/W and the user who uses application programs to solve computational problems. OS helps in the proper utilization of resources.
+
+3) What is Shell and Kernel?
+Kernel: Interacts directly with H/W., heart of OS. 
+Shell: User interface provided by OS.
+
+4) What is Pre emptive and Non-Preemptive OS?
+Ans:  Preemptive: When a process that is running is temporarily stopped due to its time slice expiration for accommodation of another process. Eg: Time sharing and Multitasking OS.
+
+Non-Preemptive:  When a process gets CPU, it will go on till it is either terminated or when performing I/O. Eg: Multiprogrammed OS.
+
+5) Time sharing OS: preemptive multitasking
+
+6) Multiprogrammed OS: Non-preemptive. 
+
+7) Multiprocessor Systems: More than one processor..
+        a) Symmetric Multiprocessing: Each processor runs an identical copy of the OS and so many processes are able to run at once with no adverse effect on performance.
+        b) Asymmetric Multiprocessing: There is a master processor who schedules and allocates work to slave processors.
+
+8) Distributed Systems: "A collection of independent computers that appears to its users as a single coherent system". (definition taken from "Distributed Systems Principles and Paradigms" by Andrew S.Tanenbaum and Maarten Van Steen) Eg: big companies like Google and Facebook use distributed systems.
+
+So, Distributed Systems create an abstraction to the underlying local Operating Systems.
+******************************************************************
+September 14th, 2015
+
+Windows 3.1
+
+Hardware Interrupt: allows the OS to come in to run the scheduler
+
+Preemption
+
+Process Table: each entry in the table is called a "context block" which contains information about a process such as process name and state (discussed below), priority (discussed below), registers, and a semaphore it may be waiting on (discussed later).
+
+User Threads vs. Kernel Threads
+
+pthread_create in Kernel thread is just a system call
+pthread_create in User thread is just a function call
+
+Difference is context switching! System call causes time! Thus user threads are faster than Kernel threads
+
+pthread_yield
+******************************************************************
+09/16/2015
+
+Threads are supposed to be cooperative as compared to process
+
+For example, your system does not support pthread which is back by kernel thread, jvm will be responsible for using user thread
+
+Scheduling
+
+CPU Bound vs I/O Bound
+
+A program is CPU bound if it would go faster if the CPU were faster, i.e. it spends the majority of its time simply using the CPU (doing calculations). A program that computes new digits of π will typically be CPU-bound, it's just crunching numbers.
+
+A program is I/O bound if it would go faster if the I/O subsystem was faster. Which exact I/O system is meant can vary; I typically associate it with disk. A program that looks through a huge file for some data will often be I/O bound, since the bottleneck is then the reading of the data from disk.
+
+When to Schedule
+	Software Interrupt:
+		1. Process Creation
+		2. Process Exit
+		3. Blocked
+
+	For example, when a process is blocked, the scheduler should switch to another process
+
+Batch Scheduling
+	First come first serve
+******************************************************************
+09/17/2015, (Recitation)
+
+Thread is light weight
+
+pthread.h
+
+pthread_self()
+pthread_create()
+pthread_join()
+******************************************************************
+09/21/2015
+	
+	First Come First Served (FCFS)
+
+	Throughput: Number of jobs we could do per unit time
+	Average Turnaround time: Finish - available
+
+	Throughput would only be useful when we need to know how much overhead
+
+	Fairness
+
+	Shortest Job First (SJF)
+		- In terms of Average Turnaround time, SJF is optimal
+
+	Knowing the runtime of a process is impossible
+
+	$Interactive Scheduling$
+
+	Round Robin Scheduling
+
+		Quantum
+
+	Priority Scheduling
+******************************************************************
+09/23/2015
+
+	Highest Priority: 4
+	Lowest Priority: 1
+
+	Difference between 4 and 1: 
+
+	CPU Burst: the amount of time the process uses the processor before it is no longer ready 
+
+	Shortest Process Next
+		SJF applied to Interactive System
+		- Hard to estimate espeically in system with user interaction
+		since it is difficult to estimate the length of time a process is going to take 
+		Prefer I/O Bound Processes since they have short CPU bursts
+	Guaranteed Scheduling
+		N Processes get 1/N of the CPU Time
+		It has a preference for I/O bound processes as they do not consume much processors' time 
+	Fair Share
+		N users get 1/N CPU time
+	Lottery Scheduling
+		Give out tickets, pull one at random, winner runs
+
+	Earliest Deadline First (EDF)
+		Real-time: How you do homework
+
+	Race Condition
+
+		enter_critical_region() {
+
+			Disable Preemption
+		}
+
+		leave_critical_region(){
+
+		}
+
+		Mutual Exclusive
+
+		Goals:
+			1. No two processes can be inside their critical regions at the same time
+			2. No assumptions about CPU speed or number of CPUs 
+			3. No Process outside its critical region may block another processes
+			4. No Process should have to wait forever to enter the critical region
+			
+******************************************************************
+09/28/2015
+
+-------------------------------
+	enter_critical_region()
+	{
+		while(turn != 0)
+		{
+		
+		}
+	}
+
+	leave_critical_region()
+	{
+		turn = 1;
+	}
+
+	Strict Alternation:
+
+	Process A:
+
+	while = (TRUE) {
+		while (trun != 0)
+		// loop
+		critical_region();
+		turn = 1;
+		noncritical_region();
+	}
+
+	Process B: 
+
+	while(TRUE) {
+		while(turn != 1)
+		//loop
+		critical_region();
+		turn = 0;
+		noncritical_region();
+	}
+-------------------------------
+	Busy waiting
+
+	Global -> locked = 0
+
+	enter_critical_region()
+	{
+		while(locked)
+
+		locked = 1;
+	}
+
+	leave_critical_region()
+	{
+		leave = 0;
+	}
+-------------------------------
+Hardware Support
+
+int lock = 0;
+
+Process A:
+
+while (1) {
+	while (TestAndSet(lock))
+	//critical region
+	lock = 0;
+}
+
+
+Process B: 
+
+while (1) {
+	while(Swap(lock,1) == 1)
+	//critical region
+	lock = 0;
+}
+-------------------------------
+Peterson's algorithm
+
+Simple software implementation
+-------------------------------
+Producer/Consumer Problem
+
+******************************************************************
+09/30/2015
+
+	Semaphore with Blocking
+******************************************************************
+10/05/2015
+	
+	Binary Semaphore
+
+	Mutext: a simplified version of a semaphore that can only be locked or unlocked 
+
+	Barriers
+
+	Monitors
+
+	Message Passing
+
+	Deadlock:
+		1. Mutual exclusion
+			Resource can only be held by one process at a time
+		2. Hold and wait
+			Process gains one resource, holds it, then attempts to gain anotger, waiting if failed
+		3. No preemption
+			Resource cannot be forcibly taken away
+		4. Circular wait
+			Process A is waiting for a resource held by Process V
+
+	Deadlock Detection Algorithm
+******************************************************************
+10/07/2015
+
+	Deadlock avoidance
+
+	Banker's Algorithm
+
+	Banker's with multiple Resources
+
+	Deadlock Prevention
+		Attack Mutual Exclusion
+		Attack Hold and wait
+		Attack No Preemption
+		Attack Circular Wait (only Possible way!)
+
+		E.g Process A (12) is requesting 20
+	Operating system does not allow a process requesting a lower resource number than its current holding
+******************************************************************
+10/12/2015
+
+	Virtual Memory
+
+	Exclusive Access
+
+	Degree of Multiprogramming
+		- CPU-bound
+
+	The degree of multiprogramming describes the maximum number of processes that a single-processor system can accommodate efficiently. 
+	The primary factor affecting the degree of multiprogramming is the amount of memory available to be allocated to executing processes.	
+
+
+	Relocation & Protection
+
+	Operation system has no control over where the program will be running
+
+	Relocation: Because several processes share memory, we cannot predict in advance where a process will be loaded in memory. This is similar to a compiler's inability to predict where a subroutine will be after linking.
+
+
+	Base register & Limit register -> Parition problem
+	Never uses absolute addressing -> Relocation problem
+
+	Swapping 
+
+	Allocation Management
+
+		Bitmaps: 
+			1. check chunk granularity instead of byte -> leads to internal fragmentation
+			2. Linked list
+
+			malloc() free()
+
+			Worst fit
+				- Find the free block with the most left over after fulfilling the allocation request
+
+			Quick fit
+####################
+	Midterm Review
+
+		What is an OS?
+		Monolithic vs Microkernel architecture
+		virtual machine
+
+		Process
+			Creating 
+			Terminating
+			Context switch
+
+			Process Table
+			Process states
+
+			threads: user vs kernel
+			Scheduling: round robin, shortest job first etc
+			
+			IPC: race condition, critical region, mutual exclusion, peterson solution, semaphore & mutexes
+				monitor and barrier
+
+			Deadlock: 4 conditions, banker's algorithm, detection
+
+			memory
+
+
+******************************************************************	
+10/20/2015
+
+	Virtual Address space
+
+		32-bit virtual address space
+
+	Mapping: Virtual Address <-> Physical Address
+
+	1. Hash functions
+
+		E.g h(VA) = VA % N
+
+		Limitation: Because of pigeonhole problem, there are always collisions
+
+		They are prescriptive. Hash functions told us something has to be in somewhere
+
+	2. Table
+		E.g table[VA] -> PA
+
+		Limitation: Time and space
+
+		Has to have a MMU -> Memory Management Unit, put on-chip like registers to enable the fast speed
+
+		Each entry is a physical address. It is dependent on the detailed physical address.
+
+		Let's say it is 32-bit(4 bytes) per entry.
+
+		The size/height of the table: E.g A 4GB address space -> 2^32 * 4 = 2^34
+
+		Page and Page frame: Page has to be equal size of page frame
+
+		Virtual address space size/Page Size
+
+		Page size has to be appropriate Want more frames because it increases the degree of multiprogramming
+
+		E.g 4KB page -> 
+
+		MMU algorithm
+
+		Input: Page table
+		Output: PA
+		Steps: 
+				PageTable[Page Number]
+				Integer division -> 4000/4096 = 0, It maps pages to page frames
+
+				PA = Frame number * Pagesize + offset
+******************************************************************
+10/21/2015
+
+	
